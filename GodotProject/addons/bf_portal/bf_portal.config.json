@@ -1,7 +1,7 @@
 {
 	"setupEnabled": true,
 	"python": "../SDK/runtime/python",
-	"venv": "../SDK/runtime/venv",
+	"venv": "../SDK/venv",
 	"gdconverter": "../SDK/deps/gdconverter",
 	"fbExportData": "../SDK/deps/FbExportData",
 	"export": "../export",

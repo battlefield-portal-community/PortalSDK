@@ -1,2 +1,0 @@
--e ./code/gdconverter
--r ./code/gdconverter/requirements.txt

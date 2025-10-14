@@ -1,9 +1,9 @@
 {
 	"setupEnabled": true,
-	"python": "../python",
-	"venv": "../venv",
-	"gdconverter": "../code/gdconverter",
-	"fbExportData": "../FbExportData",
-	"export": "../export/levels",
+	"python": "../SDK/runtime/python",
+	"venv": "../SDK/runtime/venv",
+	"gdconverter": "../SDK/deps/gdconverter",
+	"fbExportData": "../SDK/deps/FbExportData",
+	"export": "../export",
 	"data_version": ""
 }

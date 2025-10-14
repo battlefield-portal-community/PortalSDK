@@ -16,7 +16,7 @@ data_*/
 mono_crash.*.json
 
 *.exe
-FbExportData/thumbnails/
+SDK/deps/FbExportData/thumbnails/
 python/
 export/
 GodotProject/raw/

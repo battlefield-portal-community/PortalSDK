@@ -12063,51 +12063,51 @@ enum WorldIconImages {
 
 # ------------------------
 static func Wait(n) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the value of a Variable.
 static func SetVariable(variable, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player to act independently. They will attempt to complete objectives, fire on enemy players, etc. (Only works for AI players)
 static func AIBattlefieldBehavior(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player to defend an area around a location. (Only works for AI players)
 static func AIDefendPositionBehavior(player, defendPosition, minDistance, maxDistance) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player's current position as idle point. (Only works for AI players)
 static func AIIdleBehavior(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player to move to a location with a line of sight to a specific position. (Only works for AI players)
 static func AILOSMoveToBehavior(player, position) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player a destination to move to. (Only works for AI players)
 static func AIMoveToBehavior(player, position) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player to use parachute. (Only works for AI players)
 static func AIParachuteBehavior(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player to move to a valid position on navmesh near a location. (Only works for AI players)
 static func AIValidatedMoveToBehavior(player, position) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player to patrol a waypoint. (Only works for AI players)
 static func AIWaypointIdleBehavior(player, waypointPath) -> void:
-	pass # TODO: Implement
+	pass
 
 # Use this on a spawner to determine if AI soldiers spawned will leave the game after they are killed.
 static func AISetUnspawnOnDead(spawner, enableUnspawnOnDead) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the time (in seconds) it takes for AI soldiers from the provided Spawner to unspawn after death.
 static func SetUnspawnDelayInSeconds(spawner, delay) -> void:
-	pass # TODO: Implement
+	pass
 
 # Spawn one AI soldier from a specific AI Spawner.
 static func SpawnAIFromAISpawner(spawner, classToSpawn, name, team) -> void:
@@ -12115,675 +12115,675 @@ static func SpawnAIFromAISpawner(spawner, classToSpawn, name, team) -> void:
 
 # Unspawns all AIs who were spawned by a specific AI Spawner.
 static func UnspawnAllAIsFromAISpawner(spawner) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables shooting for AI. (Only works for AI players)
 static func AIEnableShooting(player, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables targeting for AI. An AI unable to target cannot shoot, but will also not notice other soldiers (Only works for AI players)
 static func AIEnableTargeting(player, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Forces an AI player to fire or activate whatever weapon or gadget they are holding in their hands for a length of time.
 static func AIForceFire(player, fireDuration) -> void:
-	pass # TODO: Implement
+	pass
 
 # Tweak settings for a player's gadgets. (Only works for AI players)
 static func AIGadgetSettings(player, applyUsageCriteria, applyCoolDownAfterUse, applyInaccuracy) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player's focus point, possibly asking it to fire at it. (Only works for AI players)
 static func AISetFocusPoint(player, point, isTarget) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player's move speed for MoveTo Behaviors. (Only works for AI players)
 static func AISetMoveSpeed(player, moveSpeed) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player's stance. (Only works for AI players)
 static func AISetStance(player, stance) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets player's current target. (Only works for AI players)
 static func AISetTarget(aiPlayer, targetPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # Gives a player the instruction to use a specific gadget on a target location or player. (Only works for AI players)
 static func AIStartUsingGadget(player, gadget, targetPos) -> void:
-	pass # TODO: Implement
+	pass
 
 # Clears the player's gadget instructions. (Only works for AI players)
 static func AIStopUsingGadget(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the damage multiplier from AI players to actualy players.
 static func SetAIToHumanDamageModifier(damageMultiplier) -> void:
-	pass # TODO: Implement
+	pass
 
 # Finds or initializes an Array on a provided Variable, and stores a provided value in that Array at the specified index.
 static func SetVariableAtIndex(arrayVariable, arrayIndex, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables a world sound effect.
 static func EnableSFX(sfx, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Plays a sound using runtime spawner tech.
 static func PlaySound(sound, amplitude, location, attenuationRange, team) -> void:
-	pass # TODO: Implement
+	pass
 
 # Plays a voice-over event clip.
 static func PlayVO(voiceOver, event, flag, player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a volume associated with a Sound Effect.
 static func SetSFXVolume(sFX, volume) -> void:
-	pass # TODO: Implement
+	pass
 
 # Stops a given sound.
 static func StopSound(objectId, team) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets CameraType for all players. CameraIndex optional.
 static func SetCameraTypeForAll(cameraType, cameraIndex) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets CameraType for provided Player. CameraIndex optional.
 static func SetCameraTypeForPlayer(player, cameraType, cameraIndex) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables a player-specific screen effect.
 static func EnableScreenEffect(player, screenEffect, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables a visual effect.
 static func EnableVFX(vfx, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Move a VFX to a new coordinate. May have become redundant with the creation of the universal MoveObject action.
 static func MoveVFX(vfxID, position, rotation) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the color of a visual effect.
 static func SetVFXColor(vfxID, color) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the scale of a visual effect.
 static func SetVFXScale(vfxID, scale) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the speed of a visual effect.
 static func SetVFXSpeed(vfxID, speed) -> void:
-	pass # TODO: Implement
+	pass
 
 # Cause an emplacement spawner to spawn an emplacement of the type it is currently set to.
 static func ForceEmplacementSpawnerSpawn(emplacementSpawner) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables the feature to destroy emplacement left outside of the combat area.
 static func SetEmplacementSpawnerAbandonVehicleOutOfCombatArea(emplacementSpawner, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables the feature to destroy abandoned emplacements.
 static func SetEmplacementSpawnerApplyDamageToAbandonVehicle(emplacementSpawner, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or Disables automatic emplacement respawning from the emplacement spawner.
 static func SetEmplacementSpawnerAutoSpawn(emplacementSpawner, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the distance from the nearest player for an emplacement to consider itself abandoned.
 static func SetEmplacementSpawnerKeepAliveAbandonRadius(emplacementSpawner, keepAliveAbandonedRadius) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the delay after destruction before an emplacement automatically respawn, if the feature is activated.
 static func SetEmplacementSpawnerRespawnTime(emplacementSpawner, respawnTime) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the distance its enplacement spawner for an emplacement to consider itself abandoned.
 static func SetEmplacementSpawnerSpawnerRadius(emplacementSpawner, keepAliveSpawnerRadius) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the time left idle before an emplacement is considered abandoned.
 static func SetEmplacementSpawnerTimeUntilAbandon(emplacementSpawner, timeUntilAbandon) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the type of emplacement that will spawn from the emplacement spawner.
 static func SetEmplacementSpawnerType(emplacementSpawner, emplacementType) -> void:
-	pass # TODO: Implement
+	pass
 
 # Force spawns all players in the deploy screen.
 static func DeployAllPlayers() -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables spawning from the deploy screen for all players.
 static func EnableAllPlayerDeploy(enablePlayerDeploy) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables the ability for a target player to deploy.
 static func EnablePlayerDeploy(player, deployAllowed) -> void:
-	pass # TODO: Implement
+	pass
 
 # Overrides the time to redeploy for a target player. The redeploy time must be set to a value between 0 and 60 seconds.
 static func SetRedeployTime(player, redeployTime) -> void:
-	pass # TODO: Implement
+	pass
 
 # Undeploys all players that are alive on the battlefield back to the deploy screen.
 static func UndeployAllPlayers() -> void:
-	pass # TODO: Implement
+	pass
 
 # Undeploys a target player that is alive on the battlefield back to the deploy screen.
 static func UndeployPlayer(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Ends the current gamemode and designates the provided Player or Team as the winner. The gamemode ends in draw if Team is set to 0.
 static func EndGameMode(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Pauses or unpauses the gamemode timer based on the provided boolean input.
 static func PauseGameModeTime(pauseTimer) -> void:
-	pass # TODO: Implement
+	pass
 
 # Resets the gamemode time to its starting value.
 static func ResetGameModeTime() -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables of disables friendly fire.
 static func SetFriendlyFire(enableFriendlyFire) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the gamemode score of the provided Player or Team.
 static func SetGameModeScore(team, newScore) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the gamemode target score used to determine victory.
 static func SetGameModeTargetScore(newScore) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the duration of the game in seconds.
 static func SetGameModeTimeLimit(newTimeLimit) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a HQ to a specific Team.
 static func SetHQTeam(hq, teamID) -> void:
-	pass # TODO: Implement
+	pass
 
 # Using this command prevents anyone from joining this server. There is no way to undo this at the time.
 static func DisablePlayerJoin() -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables an area trigger. This will prevent the specific Event from being fired.
 static func EnableAreaTrigger(areaTrigger, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables an interact point.
 static func EnableInteractPoint(interactPoint, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables a spatial object.
 static func EnableSpatialObject(spatialObject, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Request the system to evaluate if a straight line between two points is interupted or not. Use OnRayCastHit and OnRayCastMissed to read the result.
 static func RayCast(player, start, stop) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the target player's team.
 static func SetTeam(player, team) -> void:
-	pass # TODO: Implement
+	pass
 
 # Unspawn an Object spawned using SpawnObject.
 static func UnspawnObject(obj) -> void:
-	pass # TODO: Implement
+	pass
 
 # Deals a provided amount of damage to a target player. Can optionally specify damage giver..
 static func DealDamage(player, damageAmount, damageGiver) -> void:
-	pass # TODO: Implement
+	pass
 
 # Revives a target player who is in the mandown state.
 static func ForceRevive(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Instantly adds a given amount of health to the target player. Can optionally specify healing player.
 static func Heal(player, healAmount, giver) -> void:
-	pass # TODO: Implement
+	pass
 
 # Kills a target player (skips the Mandown state).
 static func Kill(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Spots a target Player for all players for a specified duration of time (in seconds).
 static func SpotTarget(targetPlayer, spotterPlayer, duration, spotStatus) -> void:
-	pass # TODO: Implement
+	pass
 
 # Gradually modifies the value of a Variable at a specified rate (value/second) until it reaches the provided limit.
 static func ChaseVariableAtRate(variable, limit, deltaPerSecond) -> void:
-	pass # TODO: Implement
+	pass
 
 # Gradually modifies the value of a Variable over time (in seconds). The variable's value will reach the limit at the end of the interval.
 static func ChaseVariableOverTime(variable, limit, durationSeconds) -> void:
-	pass # TODO: Implement
+	pass
 
 # Stops an in-progress tracking of a Variable from the ChaseVariableOverTime or ChaseVariableAtRate blocks, leaving it at its current value.
 static func StopChasingVariable(variable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables deploying on provided capture point for the team that owns it.
 static func EnableCapturePointDeploying(capturePoint, enableDeploying) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the capturing time for target capture point to the provided number.
 static func SetCapturePointCapturingTime(capturePoint, capturingTime) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the neutralization time for target capture point  to the provided number.
 static func SetCapturePointNeutralizationTime(capturePoint, neutralizationTime) -> void:
-	pass # TODO: Implement
+	pass
 
 # Change the team controling a capture point.
 static func SetCapturePointOwner(capturePoint, team) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the capture time multiplier for target capture point to the provided number.
 static func SetMaxCaptureMultiplier(capturePoint, multiplier) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables a headquater.
 static func EnableHQ(hq, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables the provided objective.
 static func EnableGameModeObjective(objective, enable) -> void:
-	pass # TODO: Implement
+	pass
 
 # Determines the time needed by MCOM.
 static func SetMCOMFuseTime(mCOM, fuseTime) -> void:
-	pass # TODO: Implement
+	pass
 
 # Force a specific to deploy.
 static func DeployPlayer(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Determines if players are spawned automatically or not.
 static func SetSpawnMode(spawnModes) -> void:
-	pass # TODO: Implement
+	pass
 
 # Force Deploy a soldier from a specific spawn point.
 static func SpawnPlayerFromSpawnPoint(player, spawnPointId) -> void:
-	pass # TODO: Implement
+	pass
 
 # Teleports a target to a provided valid position facing a specified angle (in radians).
 static func Teleport(player, destination, orientation) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables all keyboard and mouse inputs - such as movement, firing, and turning - for a target player.
 static func EnableAllInputRestrictions(player, restrictInput) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables a specified Input on a target player.
 static func EnableInputRestriction(player, inputRestriction, restrictInput) -> void:
-	pass # TODO: Implement
+	pass
 
 # Adds an Attachment to a Weapon Package created through CreateWeaponPackage. Will replace existing Attachments of the same type
 static func AddAttachmentToWeaponPackage(attachment, weaponPackage) -> void:
-	pass # TODO: Implement
+	pass
 
 # Adds a Weapon or Gadget to a Soldier's loadout.
 static func AddEquipment(player, weapon, weaponPackage, desiredInventorySlots) -> void:
-	pass # TODO: Implement
+	pass
 
 # Forces the target player to switch to the provided inventory slot.
 static func ForceSwitchInventory(player, inventorySlot) -> void:
-	pass # TODO: Implement
+	pass
 
 # Removes a Weapon or Gadget from a Soldier's loadout.
 static func RemoveEquipment(player, inventorySlot) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the target player loaded ammo for the provided inventory slot.
 static func SetInventoryAmmo(player, inventorySlots, ammo) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the target player magazine ammo for the provided inventory slot.
 static func SetInventoryMagazineAmmo(player, inventorySlots, magAmmo) -> void:
-	pass # TODO: Implement
+	pass
 
 # Puts the target player into the mandown state (unless mandown is disabled).
 static func ForceManDown(player) -> void:
-	pass # TODO: Implement
+	pass
 
 # Resupplies the target player using a provided ResupplyType.
 static func Resupply(player, ressuplyType) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the max health of a target player from 0 to 1000.  The value will be multiplied by the max health multiplier of the that target.
 static func SetPlayerMaxHealth(player, maxHealth) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets a player's movement speed multiplier.
 static func SetPlayerMovementSpeedMultiplier(player, multiplier) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the target player to skip the mandown state and go directly to the deploy screen when killed.
 static func SkipManDown(player, skipManDown) -> void:
-	pass # TODO: Implement
+	pass
 
 # Move the Object provided, Euler rotation optional
 static func MoveObject(object, positionDelta, rotationDelta) -> void:
-	pass # TODO: Implement
+	pass
 
 # Orbits the Object around the provided transform over time. Optional orbitAxis otherwise transform's up vector is used
 static func OrbitObjectOverTime(object, orbitTransform, timeInSeconds, radius, shouldLoop, shouldReverse, clockwise, orbitAxis) -> void:
-	pass # TODO: Implement
+	pass
 
 # Rotate the Object provided using Euler angles
 static func RotateObject(object, rotationDelta) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the transform of the Object provided
 static func SetObjectTransform(object, transform) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the transform of the Object provided over the time provided. Options to loop indefinitely and reverse
 static func SetObjectTransformOverTime(object, transform, timeInSeconds, shouldLoop, shouldReverse) -> void:
-	pass # TODO: Implement
+	pass
 
 # Stops the Over Time movement for the provided Object if one is active
 static func StopActiveMovementForObject(object) -> void:
-	pass # TODO: Implement
+	pass
 
 # Attaches a new UI Icon Widget to an object.
 static func AddUIIcon(parentObject, image, verticalOffset, iconColour, iconText, visibility) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables showing the image of a world icon.
 static func EnableWorldIconImage(worldIcon, enableImage) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables showing the text appearing above a world icon.
 static func EnableWorldIconText(worldIcon, enableText) -> void:
-	pass # TODO: Implement
+	pass
 
 # Removes a UI Icon Widget from an object.
 static func RemoveUIIcon(objectWithIcon, visibility) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the color of a world icon.
 static func SetWorldIconColor(worldIcon, newColor) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the image of a world icon.
 static func SetWorldIconImage(worldIcon, newImage) -> void:
-	pass # TODO: Implement
+	pass
 
 # Restricts a world icon to be visible only to a specific Player or Team.
 static func SetWorldIconOwner(worldIcon, newTeamOwner) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the location of a world icon.
 static func SetWorldIconPosition(worldIcon, newPosition) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the text appearing above a world icon.
 static func SetWorldIconText(worldIcon, newText) -> void:
-	pass # TODO: Implement
+	pass
 
 # Clears all custom notification slots for the given player.
 static func ClearAllCustomNotificationMessages(target) -> void:
-	pass # TODO: Implement
+	pass
 
 # Clears the custom notification slot associated with the given slots for the specified team or player.
 static func ClearCustomNotificationMessage(slot) -> void:
-	pass # TODO: Implement
+	pass
 
 # Display a custom notification in one of the slots for the specified team or player.
 static func DisplayCustomNotificationMessage(msg, slot, duration, target) -> void:
-	pass # TODO: Implement
+	pass
 
 # Displays a message on the world log above the minimap for 6 seconds. If no target is provided, it will display the message to everyone.
 static func DisplayHighlightedWorldLogMessage(message, player = "") -> void:
-	pass # TODO: Implement
+	pass
 
 # Displays a notification-type Message on the top-right of the screen for 6 seconds.
 static func DisplayNotificationMessage(message, player = "") -> void:
-	pass # TODO: Implement
+	pass
 
 # Displays a provided message as an error in the Admin menu.
 static func SendErrorReport(message) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the name displayed at the top of score of each column. Only works for custom scoreboards.
 static func SetScoreboardColumnNames(column1Name, column2Name, column3Name, column4Name, column5Name) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the relative width of each column. Only works for custom scoreboards.
 static func SetScoreboardColumnWidths(column1Width, column2Width, column3Width, column4Width, column5Width) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the name that appears in the top-left corner of the scoreboard
 static func SetScoreboardHeader(team1Name, team2Name) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the score in up to five distinct scores for the player. Only works for custom scoreboards.
 static func SetScoreboardPlayerValues(player, column1Value, column2Value, column3Value, column4Value, column5Value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets which column the scoreboard is sorted on. Only works for custom scoreboards.
 static func SetScoreboardSorting(sortingColumn, reverseSorting) -> void:
-	pass # TODO: Implement
+	pass
 
 # Allows you to change the type of Scoreboard you want.
 static func SetScoreboardType(scoreboardType) -> void:
-	pass # TODO: Implement
+	pass
 
 # Creates a UI Button Widget.
 static func AddUIButton(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, buttonEnabled, baseColor, baseAlpha, disabledColor, disabledAlpha, pressedColor, pressedAlpha, hoverColor, hoverAlpha, focusedColor, focusedAlpha, depth = "", receiver = "") -> void:
-	pass # TODO: Implement
+	pass
 
 # Creates a new UI Container Widget.
 static func AddUIContainer(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, depth = "", receiver = "") -> void:
-	pass # TODO: Implement
+	pass
 
 # Creates a new UI Image Widget based on a Gadget.
 static func AddUIGadgetImage(name, position, size, anchor, gadget, parent, visibility) -> void:
-	pass # TODO: Implement
+	pass
 
 # Creates a new UI Image Widget.
 static func AddUIImage(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, imageType, imageColor, imageAlpha, depth = "", receiver = "") -> void:
-	pass # TODO: Implement
+	pass
 
 # Creates a new UI Text Widget.
 static func AddUIText(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, message, textSize, textColor, textAlpha, textAnchor, depth = "", receiver = "") -> void:
-	pass # TODO: Implement
+	pass
 
 # Creates a new UI Image Widget based on a Weapon and loadout.
 static func AddUIWeaponImage(name, position, size, anchor, weapon, parent, weaponPackage, visibility) -> void:
-	pass # TODO: Implement
+	pass
 
 # Deletes all UI Widgets.
 static func DeleteAllUIWidgets() -> void:
-	pass # TODO: Implement
+	pass
 
 # Deletes a particular UI Widget.
 static func DeleteUIWidget(widget) -> void:
-	pass # TODO: Implement
+	pass
 
 # Determines if UI Button Widgets can send events.
 static func EnableUIButtonEvent(widget, buttonEvent, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Determines if UI Buttons can be interacted with.
 static func EnableUIInputMode(enabled, receiver) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the base alpha (transparency) of an UI Button Widget.
 static func SetUIButtonAlphaBase(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the alpha (transparency) of an UI Button Widget when it is disabled.
 static func SetUIButtonAlphaDisabled(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the alpha (transparency) of an UI Button Widget when it is focused.
 static func SetUIButtonAlphaFocused(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the alpha (transparency) of an UI Button Widget when it is hovered.
 static func SetUIButtonAlphaHover(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the alpha (transparency) of an UI Button Widget when it is pressed.
 static func SetUIButtonAlphaPressed(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the base color of an UI Button Widget.
 static func SetUIButtonColorBase(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the color of an UI Button Widget when it is disabled.
 static func SetUIButtonColorDisabled(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the color of an UI Button Widget when it is focused.
 static func SetUIButtonColorFocused(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the color of an UI Button Widget when it is hovered.
 static func SetUIButtonColorHover(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the color of an UI Button Widget when it is pressed.
 static func SetUIButtonColorPressed(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Determines if a specific UI Button Widget is enabled.
 static func SetUIButtonEnabled(widget, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the alpha (transparency) of the image of an UI Image Widget.
 static func SetUIImageAlpha(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the color of the image of an UI Image Widget.
 static func SetUIImageColor(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the image of an UI Image Widget.
 static func SetUIImageType(widget, imageType) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the alpha (transparency) of the text of an UI Text Widget.
 static func SetUITextAlpha(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the anchor of the text in an UI Text Widget.
 static func SetUITextAnchor(widget, anchor) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the font color of an UI Text Widget.
 static func SetUITextColor(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the message displayed by an UI Text Widget.
 static func SetUITextLabel(widget, message) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the font size of an UI Text Widget.
 static func SetUITextSize(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the anchor of an UI Widget.
 static func SetUIWidgetAnchor(widget, anchor) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the alpha (transparency) of an UI Widget.
 static func SetUIWidgetBgAlpha(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the background color of an UI Widget.
 static func SetUIWidgetBgColor(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the way the UI Widget's background is rendered.
 static func SetUIWidgetBgFill(widget, bgFill) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the draw order of an UI Widget.
 static func SetUIWidgetDepth(widget, depth) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the name of an UI Widget.
 static func SetUIWidgetName(widget, name) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the padding of an UI Widget.
 static func SetUIWidgetPadding(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the parent of an UI Widget.
 static func SetUIWidgetParent(widget, parent) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the position of an UI Widget.
 static func SetUIWidgetPosition(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Changes the size of an UI Widget.
 static func SetUIWidgetSize(widget, value) -> void:
-	pass # TODO: Implement
+	pass
 
 # Determines if an UI Widget is visible or not.
 static func SetUIWidgetVisible(widget, visible) -> void:
-	pass # TODO: Implement
+	pass
 
 # Cause a vehicle spawner to spawn one vehicle of the type it is currently set to.
 static func ForceVehicleSpawnerSpawn(vehicleSpawner) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables the feature to destroy vehicles left outside of the combat area.
 static func SetVehicleSpawnerAbandonVehiclesOutOfCombatArea(vehicleSpawner, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or disables the feature to destroy abandoned vehicles.
 static func SetVehicleSpawnerApplyDamageToAbandonVehicle(vehicleSpawner, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Enables or Disables automatic vehicle respawning from the vehicle spawner.
 static func SetVehicleSpawnerAutoSpawn(vehicleSpawner, enabled) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the distance from the nearest player for a vehicle to consider itself abandoned.
 static func SetVehicleSpawnerKeepAliveAbandonRadius(vehicleSpawner, keepAliveAbandonedRadius) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the distance its vehicle spawner for a vehicle to consider itself abandoned.
 static func SetVehicleSpawnerKeepAliveSpawnerRadius(vehicleSpawner, keepAliveSpawnerRadius) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the delay after destruction before a vehicle automatically respawn, if the feature is activated.
 static func SetVehicleSpawnerRespawnTime(vehicleSpawner, respawnTime) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the time left idle before a vehicle is considered abandoned.
 static func SetVehicleSpawnerTimeUntilAbandon(vehicleSpawner, timeUntilAbandon) -> void:
-	pass # TODO: Implement
+	pass
 
 # Sets the type of vehicle that will spawn from the vehicle spawner.
 static func SetVehicleSpawnerVehicleType(vehicleSpawner, vehicleType) -> void:
-	pass # TODO: Implement
+	pass
 
 # Multiplies the maximum health of target vehicle by the provided number greater than 0 and less than or equal to 4.
 static func SetVehicleMaxHealthMultiplier(vehicle, maxHealthMultiplier) -> void:
-	pass # TODO: Implement
+	pass
 
 # Forces the specified player to exit the target vehicle.
 static func ForcePlayerExitVehicle(player, vehicle) -> void:
-	pass # TODO: Implement
+	pass
 
 # Forces the specified player into the target vehicle at the provided seat number.  If the provided seat is -1, that player will be forced into the first available seat.
 static func ForcePlayerToSeat(player, vehicle, seatNumber) -> void:
-	pass # TODO: Implement
+	pass
 
 # Get argument of subroutine at given index.
 static func GetArgument(subroutineArgIndex) -> Variant:
@@ -13487,227 +13487,227 @@ static func GetPlayerVehicleSeat(player) -> float:
 
 # ------------------------
 static func OngoingGlobal() -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingAreaTrigger(eventAreaTrigger) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingCapturePoint(eventCapturePoint) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingEmplacementSpawner(eventEmplacementSpawner) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingHQ(eventHQ) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingInteractPoint(eventInteractPoint) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingMCOM(eventMCOM) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingPlayer(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingScreenEffect(eventScreenEffect) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingSector(eventSector) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingSpawner(eventSpawner) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingSpawnPoint(eventSpawnPoint) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingTeam(eventTeam) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingVehicle(eventVehicle) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingVehicleSpawner(eventVehicleSpawner) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingWaypointPath(eventWaypointPath) -> void:
-	pass # TODO: Implement
+	pass
 
 static func OngoingWorldIcon(eventWorldIcon) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier stops trying to reach a destination.
 static func OnAIMoveToFailed(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier starts moving to a target location.
 static func OnAIMoveToRunning(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier reaches target location.
 static func OnAIMoveToSucceeded(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier parachute action is running.
 static func OnAIParachuteRunning(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier parachute action has succeeded.
 static func OnAIParachuteSucceeded(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier stops following a waypoint.
 static func OnAIWaypointIdleFailed(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier starts following a waypoint.
 static func OnAIWaypointIdleRunning(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AI Soldier finishes following a waypoint.
 static func OnAIWaypointIdleSucceeded(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a team takes control of a CapturePoint.
 static func OnCapturePointCaptured(eventCapturePoint) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a team begins capturing a CapturePoint.
 static func OnCapturePointCapturing(eventCapturePoint) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a team loses control of a CapturePoint.
 static func OnCapturePointLost(eventCapturePoint) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when the gamemode ends.
 static func OnGameModeEnding() -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger at the start of the gamemode.
 static func OnGameModeStarted() -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player is forced into the mandown state.
 static func OnMandown(eventPlayer, eventOtherPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a MCOM is armed.
 static func OnMCOMArmed(eventMCOM) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a MCOM is defused.
 static func OnMCOMDefused(eventMCOM) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a MCOM detonates.
 static func OnMCOMDestroyed(eventMCOM) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player takes damage.
 static func OnPlayerDamaged(eventPlayer, eventOtherPlayer, eventDamageType, eventWeaponUnlock) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger whenever a Player deploys.
 static func OnPlayerDeployed(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger whenever a Player dies.
 static func OnPlayerDied(eventPlayer, eventOtherPlayer, eventDeathType, eventWeaponUnlock) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player earns a kill against another Player.
 static func OnPlayerEarnedKill(eventPlayer, eventOtherPlayer, eventDeathType, eventWeaponUnlock) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player earns a kill assist.
 static func OnPlayerEarnedKillAssist(eventPlayer, eventOtherPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player enters an AreaTrigger.
 static func OnPlayerEnterAreaTrigger(eventPlayer, eventAreaTrigger) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player enters a CapturePoint capturing area.
 static func OnPlayerEnterCapturePoint(eventPlayer, eventCapturePoint) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player enters a Vehicle seat.
 static func OnPlayerEnterVehicle(eventPlayer, eventVehicle) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player enters a Vehicle seat.
 static func OnPlayerEnterVehicleSeat(eventPlayer, eventVehicle, eventSeat) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player exits an AreaTrigger.
 static func OnPlayerExitAreaTrigger(eventPlayer, eventAreaTrigger) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player exits a CapturePoint capturing area.
 static func OnPlayerExitCapturePoint(eventPlayer, eventCapturePoint) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player exits a Vehicle.
 static func OnPlayerExitVehicle(eventPlayer, eventVehicle) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player exits a Vehicle seat.
 static func OnPlayerExitVehicleSeat(eventPlayer, eventVehicle, eventSeat) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player interacts with InteractPoint.
 static func OnPlayerInteract(eventPlayer, eventInteractPoint) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player joins the game.
 static func OnPlayerJoinGame(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when any player leaves the game.
 static func OnPlayerLeaveGame(eventNumber) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player changes team.
 static func OnPlayerSwitchTeam(eventPlayer, eventTeam) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player interacts with an UI button.
 static func OnPlayerUIButtonEvent(eventPlayer, eventUIWidget, eventUIButtonEvent) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when the Player dies and returns to the deploy screen.
 static func OnPlayerUndeploy(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Raycast hits a target.
 static func OnRayCastHit(eventPlayer, eventPoint, eventNormal) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Raycast is called and doesn't hit any target.
 static func OnRayCastMissed(eventPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Player is revived by another Player.
 static func OnRevived(eventPlayer, eventOtherPlayer) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when an AISpawner spawns an AI Soldier.
 static func OnSpawnerSpawned(eventPlayer, eventSpawner) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when the gamemode time limit has been reached.
 static func OnTimeLimitReached() -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Vehicle is destroyed.
 static func OnVehicleDestroyed(eventVehicle) -> void:
-	pass # TODO: Implement
+	pass
 
 # This will trigger when a Vehicle is called into the map.
 static func OnVehicleSpawned(eventVehicle) -> void:
-	pass # TODO: Implement
+	pass
 
 
 # Utility functions

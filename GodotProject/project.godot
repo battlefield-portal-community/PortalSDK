@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="Battlefield™ Portal Project"
-config/features=PackedStringArray("4.4")
+config/features=PackedStringArray("4.5")
 config/icon="res://addons/bf_portal/godot_portal_logo.svg"
+
+[autoload]
+
+TypeScriptManager="*res://addons/bf-script/scripts/TypeScriptManager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/bf_portal/plugin.cfg", "res://addons/bf_portal/portal_tools/plugin.cfg", "res://addons/bf_portal/memory_plugin/plugin.cfg", "res://addons/bf_portal/level_validator/plugin.cfg", "res://addons/scene-library/plugin.cfg")
+enabled=PackedStringArray("res://addons/bf-script/plugin.cfg", "res://addons/bf_portal/level_validator/plugin.cfg", "res://addons/bf_portal/memory_plugin/plugin.cfg", "res://addons/bf_portal/plugin.cfg", "res://addons/bf_portal/portal_tools/plugin.cfg", "res://addons/scene-library/plugin.cfg")
 
 [gui]
 

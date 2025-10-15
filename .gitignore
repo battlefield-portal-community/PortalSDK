@@ -15,6 +15,8 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
+
+### SDK SPECIFIC
 *.exe
 SDK/deps/FbExportData/thumbnails/
 SDK/runtime/
@@ -23,8 +25,16 @@ SDK/venv/
 python/
 export/
 GodotProject/raw/
+
+# REMEMBER THIS MUST BE UPDATED WHEN EVER THE OFFICIAL ONES ARE UPDATED
+GodotProject/levels
+
 venv/
 __pycache__
+
+
+
+
 
 
 # Python Specific 

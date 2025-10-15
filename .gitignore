@@ -18,19 +18,16 @@ mono_crash.*.json
 
 ### SDK SPECIFIC
 *.exe
+SDK/venv/
+export/
+GodotProject/addons/scene-library/scene_library.json
+
+### Paths to be populated by build CI
 SDK/deps/FbExportData/thumbnails/
 SDK/runtime/
-SDK/venv/
-
-python/
-export/
 GodotProject/raw/
-
-# REMEMBER THIS MUST BE UPDATED WHEN EVER THE OFFICIAL ONES ARE UPDATED
 GodotProject/levels
 
-venv/
-__pycache__
 
 
 

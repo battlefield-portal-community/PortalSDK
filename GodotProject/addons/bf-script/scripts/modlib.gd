@@ -23,15 +23,15 @@ static func AndFn(condition_functions: Array[Callable]) -> bool:
 	return true
 
 # Get player ID
-static func get_player_id(player) -> int:
+static func getPlayerId(player) -> int:
 	return Mod.GetObjId(player)
 
 # Get team ID
-static func get_team_id(team) -> int:
+static func getTeamId(team) -> int:
 	return Mod.GetObjId(team)
 
 # Convert mod.Array to GDScript Array
-static func convert_array(mod_array) -> Array:
+static func convertArray(mod_array) -> Array:
 	var result = []
 	var n = Mod.CountOf(mod_array)
 	for i in range(n):
@@ -40,8 +40,8 @@ static func convert_array(mod_array) -> Array:
 	return result
 
 # Filter array based on condition
-static func filtered_array(mod_array, condition: Callable):
-	var arr = convert_array(mod_array)
+static func filteredArray(mod_array, condition: Callable):
+	var arr = convertArray(mod_array)
 	var result = Mod.EmptyArray()
 	for element in arr:
 		if condition.call(element):
@@ -49,8 +49,8 @@ static func filtered_array(mod_array, condition: Callable):
 	return result
 
 # Find index of first element that satisfies condition
-static func index_of_first_true(mod_array, condition: Callable, arg = null) -> int:
-	var arr = convert_array(mod_array)
+static func indexOfFirstTrue(mod_array, condition: Callable, arg = null) -> int:
+	var arr = convertArray(mod_array)
 	var n = arr.size()
 	for i in range(n):
 		var current_element = arr[i]
@@ -59,30 +59,30 @@ static func index_of_first_true(mod_array, condition: Callable, arg = null) -> i
 	return -1
 
 # Conditional execution
-static func if_then_else(condition: bool, if_true: Callable, if_false: Callable):
+static func ifThenElse(condition: bool, if_true: Callable, if_false: Callable):
 	if condition:
 		return if_true.call()
 	else:
 		return if_false.call()
 
 # Check if condition is true for all elements
-static func is_true_for_all(mod_array, condition: Callable, arg = null) -> bool:
-	var arr = convert_array(mod_array)
+static func isTrueForAll(mod_array, condition: Callable, arg = null) -> bool:
+	var arr = convertArray(mod_array)
 	for element in arr:
 		if not condition.call(element, arg):
 			return false
 	return true
 
 # Check if condition is true for any element
-static func is_true_for_any(mod_array, condition: Callable, arg = null) -> bool:
-	var arr = convert_array(mod_array)
+static func isTrueForAny(mod_array, condition: Callable, arg = null) -> bool:
+	var arr = convertArray(mod_array)
 	for element in arr:
 		if condition.call(element, arg):
 			return true
 	return false
 
 # Sort array with custom comparison
-static func sorted_array(array: Array, compare: Callable) -> Array:
+static func sortedArray(array: Array, compare: Callable) -> Array:
 	var result = array.duplicate()
 	result.sort_custom(compare)
 	return result
@@ -94,7 +94,7 @@ static func equals(a, b) -> bool:
 	return Mod.Equals(a, b)
 
 # Wait until condition is met or timeout
-static func wait_until(delay: float, condition: Callable):
+static func waitUntil(delay: float, condition: Callable):
 	var delta_count = 10
 	var delta_wait = delay / delta_count
 	for t in range(delta_count):
@@ -128,7 +128,7 @@ class Conditions:
 	func _init():
 		condition_states = []
 
-	func get_condition_state(n: int) -> ConditionState:
+	func getConditionState(n: int) -> ConditionState:
 		while n >= condition_states.size():
 			condition_states.append(ConditionState.new())
 		return condition_states[n]
@@ -146,42 +146,42 @@ static func _get_object_condition(id: int, object_conditions: Array, n: int) -> 
 	while id >= object_conditions.size():
 		object_conditions.append(Conditions.new())
 	var conditions = object_conditions[id]
-	return conditions.get_condition_state(n)
+	return conditions.getConditionState(n)
 
 # Get player condition state
-static func get_player_condition(player, n: int) -> ConditionState:
-	var id = get_player_id(player)
+static func getPlayerCondition(player, n: int) -> ConditionState:
+	var id = getPlayerId(player)
 	while id >= player_conditions.size():
 		player_conditions.append(Conditions.new())
 	var conditions = player_conditions[id]
-	return conditions.get_condition_state(n)
+	return conditions.getConditionState(n)
 
 # Get team condition state
-static func get_team_condition(team, n: int) -> ConditionState:
-	var id = get_team_id(team)
+static func getTeamCondition(team, n: int) -> ConditionState:
+	var id = getTeamId(team)
 	while id >= team_conditions.size():
 		team_conditions.append(Conditions.new())
 	var conditions = team_conditions[id]
-	return conditions.get_condition_state(n)
+	return conditions.getConditionState(n)
 
 # Get capture point condition state
-static func get_capture_point_condition(obj, n: int) -> ConditionState:
+static func getCapturePointCondition(obj, n: int) -> ConditionState:
 	var id = Mod.GetObjId(obj)
 	return _get_object_condition(id, capture_point_conditions, n)
 
 # Get MCOM condition state
-static func get_mcom_condition(obj, n: int) -> ConditionState:
+static func getMcomCondition(obj, n: int) -> ConditionState:
 	var id = Mod.GetObjId(obj)
 	return _get_object_condition(id, mcom_conditions, n)
 
 # Get vehicle condition state
-static func get_vehicle_condition(obj, n: int) -> ConditionState:
+static func getVehicleCondition(obj, n: int) -> ConditionState:
 	var id = Mod.GetObjId(obj)
 	return _get_object_condition(id, vehicle_conditions, n)
 
 # Get global condition state
-static func get_global_condition(n: int) -> ConditionState:
-	return global_conditions.get_condition_state(n)
+static func getGlobalCondition(n: int) -> ConditionState:
+	return global_conditions.getConditionState(n)
 
 # Get all players in a team
 static func getPlayersInTeam(team) -> Array:

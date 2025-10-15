@@ -12,3 +12,6 @@ func _exit_tree() -> void:
 
 func _compile():
 	TypeScriptManager.action()
+
+func type_strings() -> Dictionary:
+	return {}

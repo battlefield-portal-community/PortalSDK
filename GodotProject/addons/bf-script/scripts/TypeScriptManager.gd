@@ -22,7 +22,8 @@ func unregister(node: Node):
 
 func action():
 	var converter = GD2TSConverter.new()
-	var source_code := ""
+	var type_strings: Dictionary = {}
+	var source_code := "import * as modlib from 'modlib';\n\n"
 	var class_names: PackedStringArray = []
 	
 	for ts_file in ts_files:
@@ -31,12 +32,13 @@ func action():
 		source_code += "\n\n"
 		
 	for typescript_node in typescript_nodes:
+		type_strings.merge(typescript_node.type_strings())
 		var script = typescript_node.get_script()
 		if script:
 			source_code += "// %s\n\n" % typescript_node.get_path()
 			var new_source_code = converter.transpile_string(script.source_code)
 			var ts_class_name := "%s_%s" % [typescript_node.name, typescript_node.get_instance_id()]
-			class_names.append(ts_class_name)
+			class_names.append("new %s()" % ts_class_name)
 			new_source_code = new_source_code.replace("import {", "// import {")
 			new_source_code = new_source_code.replace("Mod.", "mod.")
 			new_source_code = new_source_code.replace("ModLib.", "modlib.")
@@ -46,10 +48,15 @@ func action():
 			source_code += new_source_code
 			source_code += "\n\n"
 	
-	source_code += "var custom_class_names = [" + ", ".join(class_names) + "];"
+	source_code += "var custom_classes = [" + ", ".join(class_names) + "];"
 	
 	var _config = PortalPlugin.read_config()
 	var _output_dir = _config["export"]
-	var file = FileAccess.open("%s/index.ts" % _output_dir, FileAccess.WRITE)
+	var file = FileAccess.open("%s/Script.ts" % _output_dir, FileAccess.WRITE)
 	file.store_string(source_code)
 	file.close()
+	
+	
+	var string_file = FileAccess.open("%s/Strings.json" % _output_dir, FileAccess.WRITE)
+	string_file.store_string(JSON.stringify(type_strings, "	", true))
+	string_file.close()

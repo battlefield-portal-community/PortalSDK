@@ -32,13 +32,13 @@ function createSignal(signal: string) {
       signalStore.add(signal, callable);
     },
     emit: function (...args: any[]) {
-      signalStore.emit(signal, args);
+      signalStore.emit(signal, ...args);
     },
   };
 }
 
 function emitSignal(signal: string, ...args: any[]) {
-  signalStore.emit(signal, args);
+  signalStore.emit(signal, ...args);
 }
 
 const BFEvents = {
@@ -235,10 +235,13 @@ export function OnGameModeEnding() {
 }
 
 // This will trigger at the start of the gamemode.
-export function OnGameModeStarted() {
-  custom_class_names.forEach((class_name: any) => {
-    class_name._ready();
+export async function OnGameModeStarted() {
+  await mod.Wait(5.0);
+
+  custom_classes.forEach((custom_class: any) => {
+    custom_class._ready();
   });
+
   emitSignal("OnGameModeStarted");
 }
 
@@ -423,7 +426,14 @@ export function OnPlayerUIButtonEvent(
   eventPlayer: mod.Player,
   eventUIWidget: mod.UIWidget,
   eventUIButtonEvent: mod.UIButtonEvent
-) {}
+) {
+  emitSignal(
+    "OnPlayerUIButtonEvent",
+    eventPlayer,
+    eventUIWidget,
+    eventUIButtonEvent
+  );
+}
 
 // This will trigger when the Player dies and returns to the deploy screen.
 export function OnPlayerUndeploy(eventPlayer: mod.Player) {

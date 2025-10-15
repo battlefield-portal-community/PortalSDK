@@ -1,3 +1,5 @@
+const custom_classes: Array<Object> = [];
+
 class SignalStore {
   _store: { [key: string]: Function[] } = {};
 
@@ -103,6 +105,30 @@ const BFEvents = {
   OnVehicleDestroyed: createSignal("OnVehicleDestroyed"),
   OnVehicleSpawned: createSignal("OnVehicleSpawned"),
 };
+
+// This will trigger at the start of the gamemode.
+export async function OnGameModeStarted() {
+  await mod.Wait(1.0);
+
+  node_instances.forEach((node_instance: any) => {
+    var NodeClass = node_instance[0];
+    var attributes: Array<any> = node_instance[1];
+    var instance = new NodeClass();
+    attributes.forEach((att) => {
+      var key = att[0];
+      var value = att[1];
+      instance[key] = value;
+    });
+
+    custom_classes.push(instance);
+  });
+
+  custom_classes.forEach((custom_class: any) => {
+    custom_class._ready();
+  });
+
+  emitSignal("OnGameModeStarted");
+}
 
 export function OngoingGlobal() {
   emitSignal("OngoingGlobal");
@@ -232,17 +258,6 @@ export function OnCapturePointLost(eventCapturePoint: mod.CapturePoint) {
 // This will trigger when the gamemode ends.
 export function OnGameModeEnding() {
   emitSignal("OnGameModeEnding");
-}
-
-// This will trigger at the start of the gamemode.
-export async function OnGameModeStarted() {
-  await mod.Wait(5.0);
-
-  custom_classes.forEach((custom_class: any) => {
-    custom_class._ready();
-  });
-
-  emitSignal("OnGameModeStarted");
 }
 
 // This will trigger when a Player is forced into the mandown state.

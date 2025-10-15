@@ -12542,11 +12542,11 @@ static func DisplayCustomNotificationMessage(msg, slot, duration, target) -> voi
 	pass # TODO: Implement
 
 # Displays a message on the world log above the minimap for 6 seconds. If no target is provided, it will display the message to everyone.
-static func DisplayHighlightedWorldLogMessage(message, player) -> void:
+static func DisplayHighlightedWorldLogMessage(message, player = "") -> void:
 	pass # TODO: Implement
 
 # Displays a notification-type Message on the top-right of the screen for 6 seconds.
-static func DisplayNotificationMessage(message, player) -> void:
+static func DisplayNotificationMessage(message, player = "") -> void:
 	pass # TODO: Implement
 
 # Displays a provided message as an error in the Admin menu.
@@ -12578,11 +12578,11 @@ static func SetScoreboardType(scoreboardType) -> void:
 	pass # TODO: Implement
 
 # Creates a UI Button Widget.
-static func AddUIButton(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, buttonEnabled, baseColor, baseAlpha, disabledColor, disabledAlpha, pressedColor, pressedAlpha, hoverColor, hoverAlpha, focusedColor, focusedAlpha, depth, receiver) -> void:
+static func AddUIButton(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, buttonEnabled, baseColor, baseAlpha, disabledColor, disabledAlpha, pressedColor, pressedAlpha, hoverColor, hoverAlpha, focusedColor, focusedAlpha, depth = "", receiver = "") -> void:
 	pass # TODO: Implement
 
 # Creates a new UI Container Widget.
-static func AddUIContainer(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, depth, receiver) -> void:
+static func AddUIContainer(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, depth = "", receiver = "") -> void:
 	pass # TODO: Implement
 
 # Creates a new UI Image Widget based on a Gadget.
@@ -12590,11 +12590,11 @@ static func AddUIGadgetImage(name, position, size, anchor, gadget, parent, visib
 	pass # TODO: Implement
 
 # Creates a new UI Image Widget.
-static func AddUIImage(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, imageType, imageColor, imageAlpha, depth, receiver) -> void:
+static func AddUIImage(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, imageType, imageColor, imageAlpha, depth = "", receiver = "") -> void:
 	pass # TODO: Implement
 
 # Creates a new UI Text Widget.
-static func AddUIText(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, message, textSize, textColor, textAlpha, textAnchor, depth, receiver) -> void:
+static func AddUIText(name, position, size, anchor, parent, visible, padding, bgColor, bgAlpha, bgFill, message, textSize, textColor, textAlpha, textAnchor, depth = "", receiver = "") -> void:
 	pass # TODO: Implement
 
 # Creates a new UI Image Widget based on a Weapon and loadout.
@@ -13310,11 +13310,11 @@ static func GetWorldIcon(worldIconNumber) -> WorldIcon:
 	return WorldIcon.new()
 
 # Returns a constructed message object which can be used with event game mode message, notification message, highlighted game mode message, and custom notification message. The message object is created by providing a number, player, or format string (which can take up to 3 format items).
-static func Message(msg, msgArg1, msgArg2) -> Variant:
+static func Message(msg, msgArg1 = "", msgArg2 = "") -> Variant:
 	return ""
 
 # Returns the UI Widget matching the specified name.
-static func FindUIWidgetWithName(name, searchRoot) -> UIWidget:
+static func FindUIWidgetWithName(name, searchRoot = "") -> UIWidget:
 	return UIWidget.new()
 
 # Returns a number representing the button base alpha of the specified UI Widget.

@@ -36,6 +36,8 @@ if errorlevel 1 (
 echo Removing old directories if they exist...
 if exist "GodotProject\raw" rmdir /s /q "GodotProject\raw"
 if exist "GodotProject\.godot" rmdir /s /q "GodotProject\.godot"
+if exist "GodotProject\levels" rmdir /s /q "GodotProject\levels"
+if exist "SDK\deps\FbExportData\thumbnails" rmdir /s /q "SDK\deps\FbExportData\thumbnails"
 if exist "python" rmdir /s /q "python"
 
 echo Moving GodotProject/raw...
@@ -56,6 +58,21 @@ if exist "%TMP_DIR%\GodotProject\.godot" (
     )
 ) else (
     echo Warning: GodotProject/.godot not found in downloaded SDK
+)
+
+echo Moving GodotProject/levels...
+if exist "%TMP_DIR%\GodotProject\levels" (
+    move "%TMP_DIR%\GodotProject\levels" "GodotProject\levels"
+) else (
+    echo Warning: GodotProject/levels not found in downloaded SDK
+)
+
+echo Moving FbExportData/thumbnails to SDK/deps/FbExportData/thumbnails...
+if exist "%TMP_DIR%\FbExportData\thumbnails" (
+    if not exist "SDK\deps\FbExportData" mkdir "SDK\deps\FbExportData"
+    move "%TMP_DIR%\FbExportData\thumbnails" "SDK\deps\FbExportData\thumbnails"
+) else (
+    echo Warning: FbExportData/thumbnails not found in downloaded SDK
 )
 
 echo Moving python...

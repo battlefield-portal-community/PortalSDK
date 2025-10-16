@@ -2,7 +2,7 @@
 # DO NOT MODIFY - Generated from TypeScript declarations
 
 class_name Mod
-extends RefCounted
+extends Node
 
 # Namespace: mod
 
@@ -12063,6 +12063,7 @@ enum WorldIconImages {
 
 # ------------------------
 static func Wait(n) -> void:
+	await Engine.property_list_changed
 	pass
 
 # Sets the value of a Variable.

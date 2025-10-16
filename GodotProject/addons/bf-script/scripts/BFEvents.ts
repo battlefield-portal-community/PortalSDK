@@ -108,17 +108,25 @@ const BFEvents = {
 
 // This will trigger at the start of the gamemode.
 export async function OnGameModeStarted() {
-  await mod.Wait(1.0);
-
   node_instances.forEach((node_instance: any) => {
     var NodeClass = node_instance[0];
-    var attributes: Array<any> = node_instance[1];
+    var attributes: any = node_instance[1];
     var instance = new NodeClass();
-    attributes.forEach((att) => {
-      var key = att[0];
-      var value = att[1];
-      instance[key] = value;
-    });
+    for (var key in attributes) {
+      if (attributes.hasOwnProperty(key)) {
+        instance[key] = attributes[key];
+      }
+    }
+
+    // Bind all methods to the instance to preserve 'this' context
+    var proto = Object.getPrototypeOf(instance);
+    var methods = Object.getOwnPropertyNames(proto);
+    for (var i = 0; i < methods.length; i++) {
+      var method = methods[i];
+      if (typeof proto[method] === "function" && method !== "constructor") {
+        instance[method] = proto[method].bind(instance);
+      }
+    }
 
     custom_classes.push(instance);
   });
@@ -128,7 +136,25 @@ export async function OnGameModeStarted() {
   });
 
   emitSignal("OnGameModeStarted");
+
+  TickUpdate();
 }
+
+var date: Date = new Date();
+var current_time: number = 0.0;
+
+async function TickUpdate() {
+  while (true) {
+    await mod.Wait(0.0);
+    const now = date.getUTCMilliseconds();
+    custom_classes.forEach((custom_class: any) => {
+      custom_class._process(now - current_time);
+      current_time = now;
+    });
+  }
+}
+
+// Events
 
 export function OngoingGlobal() {
   emitSignal("OngoingGlobal");

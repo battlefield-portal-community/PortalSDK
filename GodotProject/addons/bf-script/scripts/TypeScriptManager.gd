@@ -38,6 +38,21 @@ func action():
 		source_code += _read_ts_file(ts_file)
 		source_code += "\n\n"
 	
+	# Process all the helpers
+	var helper_nodes = [BFPlayer.new()]
+		
+	for typescript_node in helper_nodes:
+		type_strings.merge(typescript_node._type_strings())
+		var script = typescript_node.get_script()
+		source_code += "// %s\n\n" % typescript_node.get_class()
+		var new_source_code = converter.transpile_string(script.source_code)
+		var ts_class_name := "%s_%s" % [typescript_node.name, typescript_node.get_instance_id()]
+		new_source_code = new_source_code.replace("import {", "// import {")
+		new_source_code = new_source_code.replace("Mod.", "mod.")
+		new_source_code = new_source_code.replace("ModLib.", "modlib.")
+		source_code += new_source_code
+		source_code += "\n\n"
+
 	## First we render out all the code
 	for typescript_path in typescript_nodes.keys():
 		var typescript_node = typescript_nodes.get(typescript_path)
@@ -67,7 +82,7 @@ func action():
 		for prop in property_list:
 			if prop.usage == 4102:
 				export_values.set(prop.name, registered_node.get(prop.name))
-		source_code += "[%s, %s],\n" % [ts_class_name, JSON.stringify(export_values)]	
+		source_code += "[%s, %s],\n" % [ts_class_name, JSON.stringify(export_values)]
 	source_code += "];"
 	
 	var _config = PortalPlugin.read_config()

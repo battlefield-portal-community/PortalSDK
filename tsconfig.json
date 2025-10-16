@@ -1,0 +1,12 @@
+{
+    "extends": "./example_mods/tsconfig.json",
+    "compilerOptions": {
+        "types": [
+            "example_mods/typedefs/mod"
+        ],
+        "paths": {
+            "modlib": ["./example_mods/code/modlib"]
+        },
+        "outDir": "dist",
+    }
+}

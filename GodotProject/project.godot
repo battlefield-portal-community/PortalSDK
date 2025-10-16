@@ -17,6 +17,7 @@ config/icon="res://addons/bf_portal/godot_portal_logo.svg"
 [autoload]
 
 TypeScriptManager="*res://addons/bf-script/scripts/TypeScriptManager.gd"
+BFEvents="*res://addons/bf-script/scripts/BFEvents.gd"
 
 [editor_plugins]
 

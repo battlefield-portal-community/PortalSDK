@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/bf_portal/godot_portal_logo.svg")
 class_name BFScript extends Node
 
 @export_tool_button("Compile")

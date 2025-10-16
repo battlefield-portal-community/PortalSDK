@@ -246,3 +246,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AI
+.ai
+.claude

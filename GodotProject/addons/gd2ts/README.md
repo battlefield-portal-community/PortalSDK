@@ -50,7 +50,7 @@ print(typescript)
 # Transpile a file
 var result = converter.transpile_file("res://player.gd", "res://player.ts")
 if result["success"]:
-    print("Transpiled successfully!")
+	print("Transpiled successfully!")
 ```
 
 ## Testing

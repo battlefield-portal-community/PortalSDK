@@ -20,8 +20,13 @@ func _exit_tree() -> void:
 func _compile():
 	TypeScriptManager.action()
 
+# This is a placeholder. The real logic is in BFScript.ts
 func get_time() -> int:
 	return 0
+
+# This is a placeholder. The real logic is in BFScript.ts
+func get_string_value(key: String) -> String:
+	return ""
 	
 func type_strings() -> Dictionary:
 	return {}

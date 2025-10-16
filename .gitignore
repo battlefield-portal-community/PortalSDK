@@ -27,12 +27,7 @@ SDK/deps/FbExportData/thumbnails/
 SDK/runtime/
 GodotProject/raw/
 GodotProject/levels
-
-
-
-
-
-
+python
 
 # Python Specific 
 # Byte-compiled / optimized / DLL files
@@ -251,3 +246,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AI
+.ai
+.claude

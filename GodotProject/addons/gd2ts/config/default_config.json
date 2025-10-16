@@ -1,0 +1,22 @@
+{
+  "rootDir": "./scripts",
+  "outDir": "./typescript",
+  "strictTypes": false,
+  "inferTypes": true,
+  "preserveComments": true,
+  "generateSourceMaps": false,
+  "ignore": [
+    "**/build/**",
+    "**/addons/**",
+    "**/tests/**"
+  ],
+  "godotVersion": "4.0",
+  "useGodotDefs": true,
+  "godotDefsPath": "./_godot_defs",
+  "fileExtension": ".ts",
+  "indentStyle": "tabs",
+  "indentSize": 4,
+  "convertSignals": true,
+  "convertGetNode": true,
+  "verbose": false
+}
